@@ -213,12 +213,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 470px;
 }
 
 .lname-t {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 470px;
 }
 
 .name-t h1 {
@@ -324,14 +326,14 @@ a:hover {
 
 .linfo {
   display: grid;
-  grid-template-columns: 250px 250px;
+  grid-template-columns: 280px 280px;
   grid-template-rows: 70px 70px;
   align-items: center;
 }
 
 .llinfo {
   display: grid;
-  grid-template-columns: 250px 250px;
+  grid-template-columns: 280px 280px;
   grid-template-rows: 70px 70px;
   align-items: center;
 }

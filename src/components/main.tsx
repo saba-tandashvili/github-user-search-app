@@ -29,7 +29,6 @@ function Main() {
   const [user, setUser] = useState<UserType | undefined>();
   const [search, setSearch] = useState("");
   const [light, setLight] = useState(false);
-  console.log(light);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -95,7 +94,7 @@ function Main() {
 
             <div className="info">
               <div className={!light ? "name-t" : "lname-t"}>
-                <h1>{user?.name || "The Octocat"}</h1>
+                <h1>{!user ? "The Octocat" : user?.name || "***"}</h1>
                 <p>{user?.join || "Joined 25 Jan 2011"}</p>
               </div>
 
@@ -110,17 +109,17 @@ function Main() {
               <div className={!light ? "numsd" : "lnumsd"}>
                 <div className={!light ? "infod" : "linfod"}>
                   <p>Repos</p>
-                  <h2>{user?.public_repos || "8"}</h2>
+                  <h2>{!user ? "8" : user?.public_repos}</h2>
                 </div>
 
                 <div className={!light ? "infod" : "linfod"}>
                   <p>Followers</p>
-                  <h2>{user?.followers || "3938"}</h2>
+                  <h2>{!user ? "3938" : user?.followers}</h2>
                 </div>
 
                 <div className={!light ? "infod" : "linfod"}>
                   <p>Following</p>
-                  <h2>{user?.following || "9"}</h2>
+                  <h2>{!user ? "9" : user?.following}</h2>
                 </div>
               </div>
 
