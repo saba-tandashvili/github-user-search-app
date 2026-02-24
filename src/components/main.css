@@ -21,14 +21,13 @@ body {
 }
 
 .lcontainer {
-  background-color: #F6F8FF;
+  background-color: #f6f8ff;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
 }
-
 
 .whole {
   width: 730px;
@@ -106,7 +105,7 @@ body {
   padding-left: 30px;
   padding-right: 10px;
   margin-bottom: 30px;
-  box-shadow: 0 16px 30px -10px #4660BB33;
+  box-shadow: 0 16px 30px -10px #4660bb33;
 }
 
 .search img {
@@ -176,24 +175,26 @@ body {
 }
 
 .main {
-  height: 419px;
+  height: auto;
   width: 730px;
   border-radius: 15px;
   background-color: #1e2a47;
   padding: 50px;
+  padding-bottom: 30px;
   display: flex;
   gap: 40px;
 }
 
 .lmain {
-  height: 419px;
+  height: auto;
   width: 730px;
   border-radius: 15px;
   background-color: white;
   padding: 50px;
+  padding-bottom: 30px;
   display: flex;
   gap: 40px;
-  box-shadow: 0 16px 30px -10px #4660BB33;
+  box-shadow: 0 16px 30px -10px #4660bb33;
 }
 
 .pfp {
@@ -204,7 +205,7 @@ body {
 
 .info {
   height: 100%;
-  width: 100%;
+  width: 480px;
   display: flex;
   flex-direction: column;
 }
@@ -233,7 +234,7 @@ body {
   margin: 0;
   font-weight: 700;
   font-size: 26px;
-  color: #2B3442;
+  color: #2b3442;
 }
 
 .name-t p {
@@ -246,7 +247,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   opacity: 0.8;
-  color: #697C9A;
+  color: #697c9a;
 }
 
 a {
@@ -260,8 +261,9 @@ a:hover {
   text-decoration: underline;
 }
 
-.lbio{
-    color: #4B6A9B;
+
+.lbio {
+  color: #4b6a9b;
 }
 
 .numsd {
@@ -279,7 +281,7 @@ a:hover {
 .lnumsd {
   min-height: 85px;
   width: 480px;
-  background-color: #F6F8FF;
+  background-color: #f6f8ff;
   display: flex;
   border-radius: 10px;
   justify-content: space-between;
@@ -308,7 +310,7 @@ a:hover {
   font-weight: 400;
   margin: 0;
   font-size: 13px;
-  color: #4B6A9B;
+  color: #4b6a9b;
 }
 
 .infod h2 {
@@ -321,21 +323,23 @@ a:hover {
   font-weight: 700;
   margin: 0;
   font-size: 22px;
-  color: #2B3442;
+  color: #2b3442;
 }
 
 .linfo {
   display: grid;
-  grid-template-columns: 280px 280px;
-  grid-template-rows: 70px 70px;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 50px 50px;
   align-items: center;
+  margin-top: 20px;
 }
 
 .llinfo {
   display: grid;
-  grid-template-columns: 280px 280px;
-  grid-template-rows: 70px 70px;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 50px 50px;
   align-items: center;
+  margin-top: 20px;
 }
 
 .linfo img {
@@ -360,14 +364,14 @@ a:hover {
 
 .llinfo a {
   text-decoration: none;
-  color: #4B6A9B;
+  color: #4b6a9b;
 }
 
 .llinfo p {
   display: flex;
   align-items: center;
   border-radius: 0;
-  color: #4B6A9B;
+  color: #4b6a9b;
 }
 
 .linfo a:hover {
