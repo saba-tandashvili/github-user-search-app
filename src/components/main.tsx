@@ -94,7 +94,7 @@ function Main() {
 
             <div className="info">
               <div className={!light ? "name-t" : "lname-t"}>
-                <h1>{!user ? "The Octocat" : user?.name || "***"}</h1>
+                <h1>{!user ? "The Octocat" : user?.name || user?.login}</h1>
                 <p>{user?.join || "Joined 25 Jan 2011"}</p>
               </div>
 
