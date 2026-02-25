@@ -1,7 +1,7 @@
 import "./main.css";
 import { useState } from "react";
 import Sun from "../assets/icon-sun.svg";
-import Moon from "../assets/icon-moon.svg"
+import Moon from "../assets/icon-moon.svg";
 import Search from "../assets/icon-search.svg";
 import Cat from "../assets/cat.png";
 import Location from "../assets/icon-location.svg";
@@ -29,6 +29,12 @@ function Main() {
   const [user, setUser] = useState<UserType | undefined>();
   const [search, setSearch] = useState("");
   const [light, setLight] = useState(false);
+
+  const searchf = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      getUser();
+    }
+  };
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -71,7 +77,10 @@ function Main() {
         <div className="whole">
           <div className="top">
             <h1>devfinder</h1>
-            <button className={!light ? "mode-switch" : "lmode-switch"} onClick={() => setLight(!light)}>
+            <button
+              className={!light ? "mode-switch" : "lmode-switch"}
+              onClick={() => setLight(!light)}
+            >
               {!light ? "LIGHT" : "DARK"}
               <img src={!light ? Sun : Moon} alt="" />
             </button>
@@ -85,6 +94,7 @@ function Main() {
                 setSearch(event.target.value);
               }}
               placeholder="Search GitHub username…"
+              onKeyDown={searchf}
             />
             <button onClick={() => getUser()}>Search</button>
           </div>
@@ -98,7 +108,7 @@ function Main() {
                 <p>{user?.join || "Joined 25 Jan 2011"}</p>
               </div>
 
-              <a href={`${user?.html_url}`}>{user?.login || "@octocat"}</a>
+              <a href={`${user?.html_url}`}>{user?.login ? `@${user?.login}` : "@octocat"}</a>
 
               <p className={!light ? "bio" : "lbio"}>
                 {search === ""
